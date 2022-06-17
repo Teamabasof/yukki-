@@ -7,7 +7,7 @@ from pytgcalls.types import Update
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
-from SuzuneCore.core.queue import (
+from SuzuneCore.src.queue import (
     is_active_chat,
     add_active_chat,
     remove_active_chat,
