@@ -17,10 +17,10 @@ from SuzuneCore.src.queue import (
     is_music_playing,
     music_off,
 )
-from SuzuneCore.calls import calls
-from SuzuneCore.setup.filters import command, other_filters
-from SuzuneCore.setup.decorators import sudo_users_only
-from SuzuneCore.calls.queues import clear, get, is_empty, put, task_done
+from SuzuneCore.callsmusic import calls
+from SuzuneCore.base.filters import command, other_filters
+from SuzuneCore.base.decorators import sudo_users_only
+from SuzuneCore.callsmusic.queues import clear, get, is_empty, put, task_done
 
 
 async def member_permissions(chat_id: int, user_id: int):
