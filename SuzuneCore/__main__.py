@@ -14,7 +14,7 @@ from SuzuneCore.config import API_ID, API_HASH, BOT_TOKEN, BG_IMG, OWNER_ID, BOT
 
 
 response = requests.get(BG_IMG)
-with open("./etc/foreground.png", "wb") as file:
+with open("./resources/foreground.png", "wb") as file:
     file.write(response.content)
 
 
