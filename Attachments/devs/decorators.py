@@ -20,8 +20,8 @@ from typing import Callable
 from pyrogram import Client
 from pyrogram.types import Message
 
-from helpers.admins import get_administrators
-from config import SUDO_USERS
+from Attachments.devs.admins import get_administrators
+from SuzuneCore.config import SUDO_USERS
 
 
 def errors(func: Callable) -> Callable:
