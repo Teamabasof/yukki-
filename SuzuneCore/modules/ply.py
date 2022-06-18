@@ -57,9 +57,9 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await lel.edit(f"#⃣ **Queued** at position {position}!")
     else:
-        calls.pytgcalls.join_group_call(message.chat.id, file_path)
+        await calls.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-        photo="https://telegra.ph/file/fa90d4ed2fac4f5300d76.jpg",
+        photo="https://telegra.ph/file/a7a5144ddd3214db6aebc.jpg",
         reply_markup=keyboard,
         caption="▶️ **Playing** here the song requested by🔥{}!".format(
         message.from_user.mention()
