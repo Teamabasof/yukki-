@@ -9,10 +9,10 @@ from Attachments.converter import converter
 from Attachments.downloader import youtube
 
 from SuzuneCore.config import BOT_NAME as bn, DURATION_LIMIT
-from devs.filters import command, other_filters
-from devs.decorators import errors
-from devs.errors import DurationLimitError
-from devs.gets import get_url, get_file_name
+from Attachments.devs.filters import command, other_filters
+from Attachments.devs.decorators import errors
+from Attachments.devs.errors import DurationLimitError
+from Attachments.devs.gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Client.on_message(command("ply") & other_filters)
