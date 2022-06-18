@@ -6,7 +6,7 @@ from pyrogram.types import Message, Voice
 from Attachments.callsmusic import callsmusic, queues
 
 from Attachments.converter import converter
-from Attachments.downloaders import youtube
+from Attachments.downloader import youtube
 
 from SuzuneCore.config import BOT_NAME as bn, DURATION_LIMIT
 from devs.filters import command, other_filters
