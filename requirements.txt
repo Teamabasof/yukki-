@@ -25,3 +25,4 @@ youtube-search
 yt-dlp
 regex
 html5lib
+youtube_dl
