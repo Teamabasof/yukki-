@@ -2,9 +2,9 @@ from os import path
 
 from pyrogram import Client
 from pyrogram.types import Message, Voice
-
+from pytgcalls import StreamType
 from Attachments.callsmusic import callsmusic, queues
-
+from pytgcalls.types.input_stream import AudioPiped
 from Attachments.converter import converter
 from Attachments.downloader import youtube
 from SuzuneCore.callsmusic import calls
@@ -57,7 +57,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await lel.edit(f"#⃣ **Queued** at position {position}!")
     else:
-        await calls.pytgcalls.join_group_call(message.chat.id, file_path)
+        await calls.pytgcalls.join_group_call(message.chat.id, AudioPiped(audio), stream_type=StreamType().pulse_stream)
         await message.reply_photo(
         photo="https://telegra.ph/file/a7a5144ddd3214db6aebc.jpg",
         reply_markup=keyboard,
