@@ -20,8 +20,8 @@ from os import path
 
 from youtube_dl import YoutubeDL
 
-from config import BOT_NAME as bn, DURATION_LIMIT
-from helpers.errors import DurationLimitError
+from SuzuneCore.config import BOT_NAME as bn, DURATION_LIMIT
+from Attachments.devs.errors import DurationLimitError
 ydl_opts = {
     "format": "bestaudio[ext=m4a]",
     "geo-bypass": True,
