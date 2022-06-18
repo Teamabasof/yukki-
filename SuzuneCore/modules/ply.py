@@ -7,7 +7,7 @@ from Attachments.callsmusic import callsmusic, queues
 
 from Attachments.converter import converter
 from Attachments.downloader import youtube
-
+from SuzuneCore.callsmusic import calls
 from SuzuneCore.config import BOT_NAME as bn, DURATION_LIMIT
 from Attachments.devs.filters import command, other_filters
 from Attachments.devs.decorators import errors
@@ -57,7 +57,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await lel.edit(f"#⃣ **Queued** at position {position}!")
     else:
-        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
+        calls.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
         photo="https://telegra.ph/file/fa90d4ed2fac4f5300d76.jpg",
         reply_markup=keyboard,
