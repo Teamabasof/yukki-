@@ -43,7 +43,7 @@ from SuzuneCore.callsmusic import calls, queues
 from SuzuneCore.callsmusic.youtube import download
 from SuzuneCore.callsmusic import convert as cconvert
 from SuzuneCore.callsmusic.calls import client as ASS_ACC
-from SuzuneCore.core.queue import (
+from SuzuneCore.src.queue import (
     get_active_chats,
     is_active_chat,
     add_active_chat,
@@ -54,7 +54,7 @@ from SuzuneCore.core.queue import (
 )
 from SuzuneCore import app
 import SuzuneCore.calls
-from SuzuneCore.calls import youtube
+from SuzuneCore.callsmusic import youtube
 from SuzuneCore.config import (
     DURATION_LIMIT,
     que,
@@ -74,7 +74,7 @@ from SuzuneCore.base.decorators import errors, sudo_users_only
 from SuzuneCore.base.administrator import adminsOnly
 from SuzuneCore.base.errors import DurationLimitError
 from SuzuneCore.base.gets import get_url, get_file_name
-from SuzuneCore.plugins.admins import member_permissions
+from SuzuneCore.modules.admins import member_permissions
 
 
 # plus
