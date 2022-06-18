@@ -40,7 +40,7 @@ from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForb
 
 from SuzuneCore.callsmusic import calls, queues
 from SuzuneCore.callsmusic.youtube import download
-from SuzuneCore.callsmsuic import convert as cconvert
+from SuzuneCore.callsmusic import convert as cconvert
 from SuzuneCore.callsmusic.calls import client as ASS_ACC
 from SuzuneCore.src.queue import (
     get_active_chats,
