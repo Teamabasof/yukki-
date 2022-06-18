@@ -138,12 +138,14 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.write(await resp.read())
                 await f.close()
 
+
+    image = Image.open(f"./background.png")
     black = Image.open("resources/black.jpg")
     img = Image.open("resources/SuzuneCore.png")
     image5 = changeImageSize(1280, 720, img)
-    image1 = changeImageSize(1280, 720, img)
+    image1 = changeImageSize(1280, 720, image)
     image1 = image1.filter(ImageFilter.BoxBlur(10))
-    image11 = changeImageSize(1280, 720, img)
+    image11 = changeImageSize(1280, 720, image)
     image1 = image11.filter(ImageFilter.BoxBlur(10))
     image2 = Image.blend(image1,black,0.6)
 
