@@ -138,7 +138,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.write(await resp.read())
                 await f.close()
 
-    image = Image.open(f"./background.png")
+    image = Image.open("resources/IMG_20220618_143701_367.jpg")
     black = Image.open("resources/black.jpg")
     img = Image.open("resources/SuzuneCore.png")
     image5 = changeImageSize(1280, 720, img)
