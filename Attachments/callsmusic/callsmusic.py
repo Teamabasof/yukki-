@@ -1,5 +1,5 @@
 # Calls Music 1 - Telegram bot for streaming audio in group calls
-# Copyright (C) 2021  Oxy
+# Copyright (C) 2021  @TheVenomXD
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,8 @@
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 
-import config
-from . import queues
+from SuzuneCore import config 
+from Attachments.callsmusic import queues
 
 client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
 pytgcalls = PyTgCalls(client)
