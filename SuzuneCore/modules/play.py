@@ -447,10 +447,10 @@ async def play(_, message: Message):
             return await lel.edit(
                 "Provide Me A query To Play On Voice Chat\n\nExample: /play Closer"
             )
-        await lel.edit("**ғɪɴᴅɪɴɢ 🔎 sᴇʀᴠᴇʀ !!**")
+        await lel.edit("Connecting To Server!!")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("**ɢᴇᴛᴛɪɴɢ..... ʀᴇsᴘᴏɴsᴇ.....**")
+        await lel.edit("Downloaded your song!")
         try:
             results = YoutubeSearch(query, max_results=5).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
