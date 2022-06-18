@@ -53,7 +53,7 @@ from SuzuneCore.src.queue import (
     music_off,
 )
 from SuzuneCore import app
-import SuzuneCore.calls
+import SuzuneCore.callsmusic
 from SuzuneCore.callsmusic import youtube
 from SuzuneCore.config import (
     DURATION_LIMIT,
