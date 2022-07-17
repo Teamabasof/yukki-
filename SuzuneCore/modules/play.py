@@ -598,7 +598,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="Playing Your Music Via Youtube Server ▶️ 📡]({})\n\n👤 Requested By : {}\n Group : [{}](https://t.me/Suzune_Support)".format(
+            caption="Playing Your Music Via Youtube Server [▶️ 📡]({})\n\n👤 Requested By : {}".format(
                 url, message.from_user.mention(), message.chat.title
             ),
         )
