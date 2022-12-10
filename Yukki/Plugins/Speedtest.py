@@ -29,7 +29,7 @@ def bytes(size: float) -> str:
     return "{:.2f} {}B".format(size, power_dict[t_n])
 
 
-@app.on_message(filters.command("speedtest") & ~filters.edited)
+@app.on_message(filters.command("speedtest"))
 async def statsguwid(_, message):
     m = await message.reply_text("Running Speed test")
     try:
