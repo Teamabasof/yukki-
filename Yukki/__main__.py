@@ -91,11 +91,6 @@ async def initiate_bot():
         )
         console.print(f"\n[red]Stopping Bot")
         return
-    a = await app.get_chat_member(LOG_GROUP_ID, BOT_ID)
-    if a.status != "administrator":
-        print("Promote Bot as Admin in Logger Channel")
-        console.print(f"\n[red]Stopping Bot")
-        return
     try:
         await userbot.send_message(
             LOG_GROUP_ID,
