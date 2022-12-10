@@ -89,6 +89,34 @@ async def initiate_bot():
         print(
             "Bot has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
         )
+        console.print(f"\n[red]Stopping Bot")
+        return
+    a = await app.get_chat_member(LOG_GROUP_ID, BOT_ID)
+    if a.status != "administrator":
+        print("Promote Bot as Admin in Logger Channel")
+        console.print(f"\n[red]Stopping Bot")
+        return
+    try:
+        await userbot.send_message(
+            LOG_GROUP_ID,
+            "<b>Congrats!! Assistant has started successfully!</b>",
+        )
+    except Exception as e:
+        print(
+            "Assistant Account has failed to access the log Channel. Make sure that you have added your bot to your log channel and promoted as admin!"
+        )
+        console.print(f"\n[red]Stopping Bot")
+        return
+    try:
+        await userbot.join_chat("SuzuneSuperbot")
+    except:
+        pass
+    console.print(f"\n┌[red] Bot Started as {BOT_NAME}!")
+    console.print(f"├[green] ID :- {BOT_ID}!")
+    console.print(f"├[red] Assistant Started as {ASSNAME}!")
+    console.print(f"└[green] ID :- {ASSID}!")
+    await run()
+    console.print(f"\n[red]Stopping Bot")
 
 _pm = f"""Hello ,
 My name is {BOT_NAME}.
