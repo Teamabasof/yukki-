@@ -9,7 +9,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
-
 from Yukki import (ASSID, ASSMENTION, ASSNAME, ASSUSERNAME, BOT_ID, BOT_NAME,
                    BOT_USERNAME, SUDOERS, app, db, pymongodb, userbot)
 from Yukki.Core.Logger.Log import (startup_delete_last, startup_edit_last,
@@ -110,7 +109,8 @@ async def initiate_bot():
     console.print(f"├[green] ID :- {BOT_ID}!")
     console.print(f"├[red] Assistant Started as {ASSNAME}!")
     console.print(f"└[green] ID :- {ASSID}!")
-    await run()
+    await app.run()
+    await userbot.run()
     console.print(f"\n[red]Stopping Bot")
 
 _pm = f"""Hello ,
